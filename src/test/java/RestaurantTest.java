@@ -66,4 +66,15 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    // Failing Test Case
+    @Test
+    public void items_not_in_menu_should_throw_itemNotFoundException() throws itemNotFoundException {
+        List<String> selectedItemsList = new ArrayList<String>();
+        selectedItemsList.add("Vegetable lasagne");
+        selectedItemsList.add("French fries");
+        assertThrows(itemNotFoundException.class,()-> restaurant.getOrderValue(selectedItemsList));
+    }
+    // Failing Test Case
+    
 }
