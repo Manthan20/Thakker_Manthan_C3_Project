@@ -67,7 +67,7 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
-    // Failing Test Case
+    // Test Case Passed
     @Test
     public void items_not_in_menu_should_throw_itemNotFoundException() throws itemNotFoundException {
         List<String> selectedItemsList = new ArrayList<String>();
@@ -75,6 +75,6 @@ class RestaurantTest {
         selectedItemsList.add("French fries");
         assertThrows(itemNotFoundException.class,()-> restaurant.getOrderValue(selectedItemsList));
     }
-    // Failing Test Case
+    // Test Case Passed
     
 }
